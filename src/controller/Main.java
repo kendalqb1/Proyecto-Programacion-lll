@@ -17,6 +17,7 @@ public class Main extends Application {
             stage.setTitle("Login");
             stage.setResizable(false);
             stage.setScene(scene);
+            scene.getStylesheets().add("assets/css/style.css");
             stage.show();
         }
         catch (Exception e) {
