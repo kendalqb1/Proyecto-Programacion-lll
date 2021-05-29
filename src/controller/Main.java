@@ -4,8 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.sql.ResultSet;
 import java.util.Objects;
 
 public class Main extends Application {
@@ -18,6 +20,8 @@ public class Main extends Application {
             stage.setResizable(false);
             stage.setScene(scene);
             scene.getStylesheets().add("assets/css/style.css");
+            stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
+            stage.setTitle("StarBuzz Login");
             stage.show();
         }
         catch (Exception e) {

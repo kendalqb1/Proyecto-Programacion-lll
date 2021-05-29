@@ -1,15 +1,15 @@
 #btnLogin {
-    -fx-background-color: #BA9757;
+    -fx-background-color: #8A4D16;
     -fx-background-radius: 20px;
 }
 
 #btnLogin:hover {
-    -fx-background-color: #997C48;
+    -fx-background-color: #4D3B27;
     -fx-cursor: hand;
 }
 
 #btnLogin:pressed {
-    -fx-background-color: #BA9757;
+    -fx-background-color: #8A4D16;
 }
 
 .radius-20 {
