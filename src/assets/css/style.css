@@ -1,22 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 #btnLogin {
     -fx-background-color:  #da8936;
     -fx-background-radius: 20px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Raleway', sans-serif;
 }
 
 #btnLogin:hover {
     -fx-background-color: #fff5c2;
     -fx-cursor: hand;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Raleway', sans-serif;
 }
 
 #btnLogin:pressed {
     -fx-background-color: #8A4D16;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Raleway', sans-serif;
 }
 
-.paneLogin {
-    -fx-background-color:  rgba(224,224,224,0.7);
-}
-
-.radius-20 {
-    -fx-background-radius: 20px;
+.field {
+    -fx-text-fill: #fff5c2;
+    -fx-font-family: 'Raleway', sans-serif;
+    -fx-font-size: 15px;
 }
 
