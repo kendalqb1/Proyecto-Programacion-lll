@@ -18,7 +18,7 @@
             <Image url="@../assets/img/coffee-beans-with-props-for-making-coffee.jpg" />
          </image>
       </ImageView>
-      <Pane layoutX="30.0" layoutY="30.0" prefHeight="570.0" prefWidth="460.0" style="-fx-background-color: rgba(224,224,224,0.7); -fx-opacity: 1;">
+      <Pane layoutX="29.0" layoutY="55.0" prefHeight="570.0" prefWidth="460.0" style="-fx-background-color: rgba(224,224,224,0.7);" styleClass="paneLogin">
          <children>
             <Text layoutX="138.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="StarBuzz">
                <font>
@@ -45,7 +45,7 @@
                   <Font size="25.0" />
                </font>
             </Text>
-            <Button fx:id="btnLogin" layoutX="141.0" layoutY="406.0" mnemonicParsing="false" onAction="#loginManagement" style="" styleClass="radius-20" text="Iniciar Sesión" textFill="WHITE">
+            <Button fx:id="btnLogin" layoutX="170.0" layoutY="424.0" mnemonicParsing="false" onAction="#loginManagement" style="" styleClass="radius-20" text="Log In" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>

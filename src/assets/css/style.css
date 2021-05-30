@@ -12,6 +12,10 @@
     -fx-background-color: #8A4D16;
 }
 
+.paneLogin {
+    -fx-background-color:  rgba(224,224,224,0.7);
+}
+
 .radius-20 {
     -fx-background-radius: 20px;
 }
