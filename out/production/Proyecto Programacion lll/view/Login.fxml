@@ -2,67 +2,38 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="645.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+<AnchorPane prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: da8936;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
    <children>
-      <ImageView fitHeight="700.0" fitWidth="1000.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="-16.0" layoutY="22.0">
          <image>
-            <Image url="@../assets/img/coffee-beans-with-props-for-making-coffee.jpg" />
+            <Image url="@../assets/img/Blur.png" />
          </image>
       </ImageView>
-      <Pane layoutX="29.0" layoutY="55.0" prefHeight="570.0" prefWidth="460.0" style="-fx-background-color: rgba(224,224,224,0.7);" styleClass="paneLogin">
-         <children>
-            <Text layoutX="138.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="StarBuzz">
-               <font>
-                  <Font size="45.0" />
-               </font>
-            </Text>
-            <TextField fx:id="fieldUsername" layoutX="136.0" layoutY="185.0" style="-fx-background-color: rgba(255,255,255,0);" styleClass="radius-20">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </TextField>
-            <PasswordField fx:id="fieldPassword" layoutX="134.0" layoutY="321.0" style="-fx-background-color: rgba(255,255,255,0);" styleClass="radius-20">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </PasswordField>
-            <Text layoutX="165.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Text>
-            <Text layoutX="169.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Text>
-            <Button fx:id="btnLogin" layoutX="170.0" layoutY="424.0" mnemonicParsing="false" onAction="#loginManagement" style="" styleClass="radius-20" text="Log In" textFill="WHITE">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Button>
-            <Separator layoutX="136.0" layoutY="228.0" prefWidth="250.0" style="-fx-background-color: black;" />
-            <Separator layoutX="133.0" layoutY="362.0" prefWidth="250.0" style="-fx-background-color: black;" />
-            <ImageView fitHeight="60.0" fitWidth="51.0" layoutX="80.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/img/user.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="60.0" fitWidth="51.0" layoutX="78.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/img/lock.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
+      <ImageView fitHeight="572.0" fitWidth="1051.0" layoutX="33.0" layoutY="52.0">
+         <image>
+            <Image url="@../assets/img/Starbuzz%20Login%20Page.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="fieldUsername" layoutX="100.0" layoutY="338.0" prefHeight="44.0" prefWidth="288.0" style="-fx-background-color: rgba(255,255,255,0);" styleClass="radius-20">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="fieldPassword" layoutX="93.0" layoutY="462.0" prefHeight="44.0" prefWidth="302.0" style="-fx-background-color: rgba(255,255,255,0);" styleClass="radius-20">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnLogin" layoutX="185.0" layoutY="541.0" mnemonicParsing="false" onAction="#loginManagement" prefHeight="44.0" prefWidth="118.0" styleClass="radius-20" text="Login">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
