@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: da8936;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
+<AnchorPane prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: da8936;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
    <children>
       <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="-16.0" layoutY="22.0">
          <image>
@@ -17,7 +17,7 @@
       </ImageView>
       <ImageView fitHeight="572.0" fitWidth="1051.0" layoutX="33.0" layoutY="52.0">
          <image>
-            <Image url="@../assets/img/Starbuzz Login Page.png" />
+            <Image url="@../assets/img/Starbuzz%20Login%20Page.png" />
          </image>
       </ImageView>
       <TextField fx:id="fieldUsername" layoutX="100.0" layoutY="338.0" prefHeight="44.0" prefWidth="288.0" style="-fx-background-color: rgba(255,255,255,0);" styleClass="field">
