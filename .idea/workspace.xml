@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/Raleway-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Raleway-ThinItalic.ttf" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Diseno 2.0 Login">
+      <change afterPath="$PROJECT_DIR$/src/assets/img/Checkout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/Escoger_Orden.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/Extras 1.1 HouseBlend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/Extras 1.2 DarkRoast.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/Extras 1.3 Decaf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/Extras 1.4 Expresso.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Checkout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Choose_Order.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Extra1.1.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Extra1.2.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Extra1.3.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Extra1.4.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/Homepage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto Programacion lll/controller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto Programacion lll/controller/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Proyecto Programacion lll/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proyecto Programacion lll/view/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +83,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
@@ -253,7 +251,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="controller.Main" />
       <module name="Proyecto Programacion lll" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-15.0.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\JavaFX\javafx-sdk-16\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -268,17 +266,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -325,6 +312,8 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1622167923241" duration="27955000" />
+      <workItem from="1622367379329" duration="46000" />
+      <workItem from="1622586835151" duration="600000" />
     </task>
     <servers />
   </component>
@@ -374,11 +363,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Proyecto_Programacion_lll$Main.ic" NAME="Main Coverage Results" MODIFIED="1622341322846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sample.*</FILTER>
+    </SUITE>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
