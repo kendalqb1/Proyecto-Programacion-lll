@@ -20,6 +20,10 @@
     -fx-font-family: 'Raleway', sans-serif;
 }
 
+.raleway {
+    -fx-font-family: 'Raleway', sans-serif;
+}
+
 .field {
     -fx-text-fill: #fff5c2;
     -fx-font-family: 'Raleway', sans-serif;

@@ -1,10 +1,18 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import view.Dialog;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -12,6 +20,10 @@ import java.sql.SQLException;
 public class Login {
 
     Database db = new Database();
+    Dialog dialog = new Dialog();
+
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private TextField fieldUsername;
@@ -19,15 +31,36 @@ public class Login {
     @FXML
     private PasswordField fieldPassword;
 
-    @FXML
-    private Button btnLogin;
+    private int counter = 1;
 
     @FXML
-    void loginManagement() throws SQLException {
+    void loginManagement() throws SQLException, IOException {
         if (!searchUser()) {
-            System.out.println("denied");
-        } else {
-            System.out.println("successful");
+             if(counter == 3) {
+                Alert d = dialog.createErrorDialog("Incorrect user or password, Three failed attempts");
+                d.showAndWait();
+                ((Stage)anchorPane.getScene().getWindow()).close();
+                return;
+            }
+            Alert d = dialog.createErrorDialog("Incorrect user or password");
+            d.showAndWait();
+            counter++;
+
+        }
+        else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Homepage.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setTitle("HomePage");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
+            stage.show();
+
+            Alert d = dialog.createInformationDialog("Correct user and password");
+            d.showAndWait();
+
         }
     }
 
@@ -43,7 +76,7 @@ public class Login {
             }
         }
         else {
-            System.out.println("Error al conectar a la database");
+            System.out.println("Error in databae");
             return false;
         }
         return false;
