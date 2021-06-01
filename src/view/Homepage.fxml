@@ -1,53 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<<<<<<< HEAD
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: da8936;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Login">
    <children>
-      <Text layoutX="247.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Procesamiento">
+      <Button layoutX="714.0" layoutY="545.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="92.0" />
+      <Button layoutX="408.0" layoutY="582.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="92.0" />
+      <Text layoutX="258.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Processing">
          <font>
-            <Font size="25.0" />
+            <Font size="35.0" />
          </font>
       </Text>
-      <Text layoutX="669.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Ordenes">
+      <Text layoutX="666.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Orden">
          <font>
-            <Font size="27.0" />
+            <Font size="35.0" />
          </font>
       </Text>
-      <Text layoutX="461.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logo">
+      <Text layoutX="426.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGO">
          <font>
-            <Font size="73.0" />
+            <Font size="90.0" />
          </font>
       </Text>
    </children>
 </AnchorPane>
-=======
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Text?>
-
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #aaa;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="96.0" fitWidth="130.0" layoutX="53.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../assets/img/coffe-cup.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="58.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 25px;" styleClass="raleway" text="Starbuzz" />
-            <Button layoutX="52.0" layoutY="190.0" mnemonicParsing="false" text="Create Order" />
-            <Button layoutX="73.0" layoutY="246.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="73.0" layoutY="299.0" mnemonicParsing="false" text="Button" />
-         </children>
-      </AnchorPane>
-   </left>
-</BorderPane>
->>>>>>> origin/main
