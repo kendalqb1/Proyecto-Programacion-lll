@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Agregando Diseno">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Agregando Homepage">
+      <change beforePath="$PROJECT_DIR$/src/view/Checkout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Checkout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Extra1.1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Extra1.1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Extra1.2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Extra1.2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Extra1.3.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Extra1.3.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Extra1.4.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Extra1.4.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,6 +295,14 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1622167923241" duration="27955000" />
     </task>
+    <task id="LOCAL-00001" summary="Agregando Homepage">
+      <created>1622590174142</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622590174142</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -346,7 +358,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Agregando Diseno" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agregando Diseno" />
+    <MESSAGE value="Agregando Homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando Homepage" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Proyecto_Programacion_lll$Main.ic" NAME="Main Coverage Results" MODIFIED="1622341322846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
