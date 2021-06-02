@@ -32,6 +32,30 @@
     -fx-opacity: 0;
 }
 
+.btnChooseOrder {
+    -fx-cursor: hand;
+}
+
+.btnChooseOrder:hover {
+    -fx-opacity: 0.20;
+}
+
+.btnChooseOrder:pressed {
+    -fx-opacity: 0;
+}
+
+.btnPay {
+    -fx-cursor: hand;
+}
+
+.btnPay:hover {
+    -fx-opacity: 0.15;
+}
+
+.btnPay:pressed {
+    -fx-opacity: 0;
+}
+
 .raleway {
     -fx-font-family: 'Raleway', sans-serif;
 }

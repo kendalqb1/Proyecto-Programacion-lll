@@ -48,7 +48,7 @@ public class Login {
 
         }
         else {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Homepage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Choose_Order.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
