@@ -34,6 +34,7 @@
 
 .btnChooseOrder {
     -fx-cursor: hand;
+    -fx-background-color: black;
 }
 
 .btnChooseOrder:hover {
@@ -46,6 +47,7 @@
 
 .btnPay {
     -fx-cursor: hand;
+    -fx-background-color: black;
 }
 
 .btnPay:hover {

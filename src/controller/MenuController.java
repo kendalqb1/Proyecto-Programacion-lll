@@ -18,7 +18,7 @@ public class MenuController {
 
         try {
             //TODO :Login
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Choose_Order.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Login.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();

@@ -52,6 +52,7 @@ public class LoginController {
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
+            scene.getStylesheets().add("assets/css/style.css");
             stage.setTitle("HomePage");
             stage.setResizable(false);
             stage.setScene(scene);
