@@ -22,7 +22,7 @@ public class MenuController {
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
-            stage.setTitle("Login");
+            stage.setTitle("Choose Order");
             scene.getStylesheets().add("assets/css/style.css");
             stage.setResizable(false);
             stage.setScene(scene);

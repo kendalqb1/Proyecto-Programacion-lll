@@ -12,7 +12,7 @@ public class ChooseOrderController {
     @FXML
     void houseBlendDecorator() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Extra1.1.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraHouseBlend.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -31,7 +31,7 @@ public class ChooseOrderController {
     @FXML
     void darkRoastDecorator() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Extra1.2.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraDarkRoast.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -50,7 +50,7 @@ public class ChooseOrderController {
     @FXML
     void decafDecorator() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Extra1.3.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraDecaf.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
@@ -69,7 +69,7 @@ public class ChooseOrderController {
     @FXML
     void espressoDecorator() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Extra1.4.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraEspresso.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();

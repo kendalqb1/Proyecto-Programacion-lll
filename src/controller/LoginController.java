@@ -17,7 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
-public class Login {
+public class LoginController {
 
     Database db = new Database();
     Dialog dialog = new Dialog();
