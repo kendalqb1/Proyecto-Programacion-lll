@@ -58,7 +58,7 @@ public class LoginController {
             stage.setScene(scene);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
             stage.show();
-
+            ((Stage)anchorPane.getScene().getWindow()).close();
             Alert d = dialog.createInformationDialog("Correct user and password");
             d.showAndWait();
 
