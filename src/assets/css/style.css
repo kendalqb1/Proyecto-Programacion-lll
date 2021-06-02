@@ -20,6 +20,18 @@
     -fx-font-family: 'Raleway', sans-serif;
 }
 
+.btnOpacity {
+   -fx-cursor: hand;
+}
+
+.btnOpacity:hover {
+    -fx-opacity: 0.08;
+}
+
+.btnOpacity:pressed {
+    -fx-opacity: 0;
+}
+
 .raleway {
     -fx-font-family: 'Raleway', sans-serif;
 }
