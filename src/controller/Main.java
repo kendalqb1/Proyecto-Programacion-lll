@@ -14,16 +14,14 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../view/Login.fxml")));
-
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../view/Homepage.fxml")));
             Scene scene = new Scene(root);
-            stage.setTitle("Login");
             stage.setResizable(false);
             stage.setScene(scene);
             scene.getStylesheets().add("assets/css/style.css");
             Font.loadFont(getClass().getResourceAsStream("Raleway-Regular.ttf"), 10);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
-            stage.setTitle("StarBuzz Login");
+            stage.setTitle("Home Page StarBuzz");
             stage.show();
 
         }
