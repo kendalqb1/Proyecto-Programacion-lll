@@ -1,50 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: #da8936;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.HouseBlendController">
+<AnchorPane prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: #da8936;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HouseBlendController">
    <children>
       <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="-16.0" layoutY="22.0">
          <image>
             <Image url="@../assets/img/Blur.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="572.0" fitWidth="1051.0" layoutX="33.0" layoutY="52.0">
+      <ImageView fitHeight="572.0" fitWidth="1051.0" layoutX="34.0" layoutY="56.0">
          <image>
             <Image url="@../assets/img/Extras%201.1%20HouseBlend.png" />
          </image>
       </ImageView>
       <Button layoutX="826.0" layoutY="571.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="95.0" text="Button" />
       <Button layoutX="951.0" layoutY="571.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="95.0" text="Button" />
-      <RadioButton layoutX="660.0" layoutY="236.0" mnemonicParsing="false">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="660.0" layoutY="298.0" mnemonicParsing="false">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="660.0" layoutY="363.0" mnemonicParsing="false">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="660.0" layoutY="427.0" mnemonicParsing="false">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </RadioButton>
-      <RadioButton layoutX="660.0" layoutY="488.0" mnemonicParsing="false">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </RadioButton>
+      <CheckBox layoutX="682.0" layoutY="249.0" mnemonicParsing="false" />
+      <CheckBox layoutX="682.0" layoutY="374.0" mnemonicParsing="false" />
+      <CheckBox layoutX="682.0" layoutY="308.0" mnemonicParsing="false" />
+      <CheckBox layoutX="682.0" layoutY="437.0" mnemonicParsing="false" />
+      <CheckBox layoutX="682.0" layoutY="498.0" mnemonicParsing="false" />
    </children>
 </AnchorPane>
