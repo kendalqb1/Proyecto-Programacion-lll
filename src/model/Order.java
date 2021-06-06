@@ -36,6 +36,20 @@ public class Order {
         HouseBlend.add(bv);
     }
 
+    //para contar las bebidas en el menu
+    public int sizeDarkRoast(){
+        return DarkRoast.size();
+    }
+    public int sizeDecaf(){
+        return Decaf.size();
+    }
+    public int sizeEspresso(){
+        return Espresso.size();
+    }
+    public int sizeHouseBlend(){
+        return HouseBlend.size();
+    }
+
     //para remover bebidas especificas podemos hacer un pop menu con la descripcion de las bebidas
     //pero por ahora solo remueve la ultima bebida
     public void removeLastDarkRoast(){
