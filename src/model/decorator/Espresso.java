@@ -1,4 +1,4 @@
-package controller.decorator;
+package model.decorator;
 
 public class Espresso extends Beverage{
     public Espresso() {

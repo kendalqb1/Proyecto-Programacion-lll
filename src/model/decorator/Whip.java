@@ -1,4 +1,4 @@
-package controller.decorator;
+package model.decorator;
 
 public class Whip  extends CondimentDecorator{
 

@@ -1,4 +1,4 @@
-package controller.decorator;
+package model.decorator;
 
 public abstract class Beverage {
     String description;
