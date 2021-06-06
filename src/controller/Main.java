@@ -14,7 +14,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../view/Menu.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../view/Choose_Order.fxml")));
             Scene scene = new Scene(root);
             stage.setResizable(false);
             stage.setScene(scene);

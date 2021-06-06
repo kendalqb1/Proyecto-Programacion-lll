@@ -5,8 +5,7 @@ public class HouseBlend extends  Beverage{
         description = "HouseBlend";
     }
 
-    //TODO: Price HouseBlend
     public double cost() {
-        return 0;
+        return 2300;
     }
 }

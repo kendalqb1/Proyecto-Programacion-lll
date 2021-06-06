@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: #da8936;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HouseBlendController">
+<AnchorPane fx:id="anchorPane" prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: #da8936;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HouseBlendController">
    <children>
       <ImageView fitHeight="640.0" fitWidth="1151.0" layoutX="-16.0" layoutY="22.0">
          <image>
@@ -18,12 +18,12 @@
             <Image url="@../assets/img/Extras%201.1%20HouseBlend.png" />
          </image>
       </ImageView>
-      <Button layoutX="826.0" layoutY="571.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="95.0" text="Button" />
-      <Button layoutX="951.0" layoutY="571.0" mnemonicParsing="false" opacity="0.0" prefHeight="25.0" prefWidth="95.0" text="Button" />
-      <CheckBox layoutX="682.0" layoutY="249.0" mnemonicParsing="false" />
-      <CheckBox layoutX="682.0" layoutY="374.0" mnemonicParsing="false" />
-      <CheckBox layoutX="682.0" layoutY="308.0" mnemonicParsing="false" />
-      <CheckBox layoutX="682.0" layoutY="437.0" mnemonicParsing="false" />
-      <CheckBox layoutX="682.0" layoutY="498.0" mnemonicParsing="false" />
+      <Button layoutX="816.0" layoutY="571.0" mnemonicParsing="false" onAction="#closeWindow" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
+      <Button layoutX="940.0" layoutY="570.0" mnemonicParsing="false" onAction="#completeOrder" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
+      <CheckBox fx:id="boxMilk" layoutX="684.0" layoutY="249.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxSoy" layoutX="684.0" layoutY="374.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxWhip" layoutX="684.0" layoutY="308.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxMoka" layoutX="684.0" layoutY="437.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxNone" layoutX="684.0" layoutY="498.0" mnemonicParsing="false" onAction="#pressedBox" />
    </children>
 </AnchorPane>

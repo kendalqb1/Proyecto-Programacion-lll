@@ -32,31 +32,20 @@
     -fx-opacity: 0;
 }
 
-.btnChooseOrder {
+
+.btnHoverPressed {
     -fx-cursor: hand;
     -fx-background-color: black;
 }
 
-.btnChooseOrder:hover {
-    -fx-opacity: 0.20;
-}
-
-.btnChooseOrder:pressed {
-    -fx-opacity: 0;
-}
-
-.btnPay {
-    -fx-cursor: hand;
-    -fx-background-color: black;
-}
-
-.btnPay:hover {
+.btnHoverPressed:hover {
     -fx-opacity: 0.15;
 }
 
-.btnPay:pressed {
+.btnHoverPressed:pressed {
     -fx-opacity: 0;
 }
+
 
 .raleway {
     -fx-font-family: 'Raleway', sans-serif;

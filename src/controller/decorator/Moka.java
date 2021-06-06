@@ -12,7 +12,7 @@ public class Moka extends CondimentDecorator{
     }
 
     public double cost() {
-        return 0 + beverage.cost();
+        return 350 + beverage.cost();
     }
 
 }

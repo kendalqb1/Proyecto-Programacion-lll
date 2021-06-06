@@ -5,8 +5,7 @@ public class DarkRoast extends Beverage {
         description = "Dark Roast";
     }
 
-    //TODO: Price DarkRoast
     public double cost() {
-        return 0;
+        return 2500;
     }
 }
