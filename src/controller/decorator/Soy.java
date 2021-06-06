@@ -13,7 +13,7 @@ public class Soy extends CondimentDecorator {
     }
 
     public  double cost() {
-        return 0 + beverage.cost();
+        return 400 + beverage.cost();
     }
 
 }

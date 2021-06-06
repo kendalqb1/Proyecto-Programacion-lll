@@ -5,8 +5,7 @@ public class Decaf  extends Beverage{
         description = "Decaf";
     }
 
-    //TODO: Price decaf
     public double cost() {
-        return 0;
+        return 2100;
     }
 }
