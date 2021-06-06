@@ -1,4 +1,4 @@
-package controller.decorator;
+package model.decorator;
 
 public class Decaf  extends Beverage{
     public Decaf() {

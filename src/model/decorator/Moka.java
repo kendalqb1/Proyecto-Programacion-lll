@@ -1,4 +1,4 @@
-package controller.decorator;
+package model.decorator;
 
 public class Moka extends CondimentDecorator{
     Beverage beverage;
