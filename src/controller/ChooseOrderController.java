@@ -6,6 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import model.decorator.DarkRoast;
+import model.decorator.Decaf;
+import model.decorator.Espresso;
+import model.decorator.HouseBlend;
 
 public class ChooseOrderController {
 
@@ -14,6 +18,7 @@ public class ChooseOrderController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraHouseBlend.fxml"));
             Parent root = loader.load();
+            DecoratorController controller = loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setTitle("House Blend");
@@ -21,6 +26,7 @@ public class ChooseOrderController {
             stage.setResizable(false);
             stage.setScene(scene);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
+            controller.setBeverage(new HouseBlend());
             stage.show();
 
         }catch (Exception e) {
@@ -33,6 +39,7 @@ public class ChooseOrderController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraDarkRoast.fxml"));
             Parent root = loader.load();
+            DecoratorController controller = loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setTitle("Dark Roast");
@@ -40,6 +47,7 @@ public class ChooseOrderController {
             stage.setResizable(false);
             stage.setScene(scene);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
+            controller.setBeverage(new DarkRoast());
             stage.show();
 
         }catch (Exception e) {
@@ -52,6 +60,7 @@ public class ChooseOrderController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraDecaf.fxml"));
             Parent root = loader.load();
+            DecoratorController controller = loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setTitle("Decaf");
@@ -59,6 +68,7 @@ public class ChooseOrderController {
             stage.setResizable(false);
             stage.setScene(scene);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
+            controller.setBeverage(new Decaf());
             stage.show();
 
         }catch (Exception e) {
@@ -70,6 +80,27 @@ public class ChooseOrderController {
     void espressoDecorator() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraEspresso.fxml"));
+            Parent root = loader.load();
+            DecoratorController controller = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setTitle("Espresso");
+            scene.getStylesheets().add("assets/css/style.css");
+            stage.setResizable(false);
+            stage.setScene(scene);
+            stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
+            controller.setBeverage(new Espresso());
+            stage.show();
+
+        }catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    void openCheckOut() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Checkout.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
