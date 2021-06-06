@@ -29,7 +29,6 @@ public class HouseBlendController {
     @FXML
     void initialize() {
 
-
     }
 
     @FXML

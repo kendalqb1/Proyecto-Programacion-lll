@@ -20,10 +20,10 @@
       </ImageView>
       <Button layoutX="815.0" layoutY="567.0" mnemonicParsing="false" onAction="#closeWindow" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <Button layoutX="939.0" layoutY="566.0" mnemonicParsing="false" onAction="#completeOrder" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
-      <CheckBox layoutX="685.0" layoutY="249.0" mnemonicParsing="false" />
-      <CheckBox layoutX="686.0" layoutY="373.0" mnemonicParsing="false" prefWidth="28.0" />
-      <CheckBox layoutX="685.0" layoutY="308.0" mnemonicParsing="false" />
-      <CheckBox layoutX="688.0" layoutY="434.0" mnemonicParsing="false" />
-      <CheckBox layoutX="689.0" layoutY="503.0" mnemonicParsing="false" />
+      <CheckBox fx:id="boxMilk" layoutX="685.0" layoutY="253.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxSoy" layoutX="685.0" layoutY="378.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxWhip" layoutX="685.0" layoutY="312.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxMoka" layoutX="685.0" layoutY="441.0" mnemonicParsing="false" onAction="#pressedBox" />
+      <CheckBox fx:id="boxNone" layoutX="685.0" layoutY="502.0" mnemonicParsing="false" onAction="#pressedBox" />
    </children>
 </AnchorPane>
