@@ -73,8 +73,6 @@ public class DecoratorController {
         Checkout checkout = Checkout.getInstance();
         checkout.getOrder().addBeverage(beverage);
 
-
-        System.out.println(beverage.getDescription() + " ₡" + beverage.cost());
         closeWindow();
     }
 
