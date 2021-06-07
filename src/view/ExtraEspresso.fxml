@@ -18,7 +18,6 @@
             <Image url="@../assets/img/Extras%201.4%20Expresso.png" />
          </image>
       </ImageView>
-      <Button layoutX="940.0" layoutY="566.0" mnemonicParsing="false" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <Button layoutX="815.0" layoutY="567.0" mnemonicParsing="false" onAction="#closeWindow" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <Button fx:id="btnNext" disable="true" layoutX="939.0" layoutY="566.0" mnemonicParsing="false" onAction="#completeOrder" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <CheckBox fx:id="boxMilk" layoutX="685.0" layoutY="245.0" mnemonicParsing="false" onAction="#pressedBox" />
