@@ -54,4 +54,9 @@ public class MenuController {
         }
     }
 
+     @FXML
+    void exitApp() {
+         ((Stage)anchorPane.getScene().getWindow()).close();
+    }
+
 }

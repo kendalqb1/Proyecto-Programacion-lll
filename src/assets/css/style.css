@@ -30,19 +30,6 @@
     -fx-font-size: 20px;
 }
 
-.btnOpacity {
-   -fx-cursor: hand;
-}
-
-.btnOpacity:hover {
-    -fx-opacity: 0.08;
-}
-
-.btnOpacity:pressed {
-    -fx-opacity: 0;
-}
-
-
 .btnHoverPressed {
     -fx-cursor: hand;
     -fx-background-color: black;

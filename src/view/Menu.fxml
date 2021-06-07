@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: #da8936;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+<AnchorPane fx:id="anchorPane" prefHeight="675.0" prefWidth="1116.0" style="-fx-background-color: #da8936;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
    <children>
       <ImageView fitHeight="621.0" fitWidth="1135.0" layoutX="-10.0" layoutY="27.0">
          <image>
@@ -17,7 +17,8 @@
             <Image url="@../assets/img/Menu.png" />
          </image>
       </ImageView>
-      <Button layoutX="303.0" layoutY="452.0" mnemonicParsing="false" onAction="#loginPage" opacity="0.0" prefHeight="48.0" prefWidth="191.0" style="-fx-background-radius: 40px;" styleClass="btnOpacity" />
-      <Button layoutX="105.0" layoutY="451.0" mnemonicParsing="false" onAction="#viewOrders" opacity="0.0" prefHeight="48.0" prefWidth="177.0" style="-fx-background-radius: 40px;" styleClass="btnOpacity" />
+      <Button layoutX="303.0" layoutY="451.0" mnemonicParsing="false" onAction="#loginPage" opacity="0.0" prefHeight="48.0" prefWidth="191.0" style="-fx-background-radius: 10px;" styleClass="btnHoverPressed" />
+      <Button layoutX="105.0" layoutY="451.0" mnemonicParsing="false" onAction="#viewOrders" opacity="0.0" prefHeight="48.0" prefWidth="178.0" style="-fx-background-radius: 10px;" styleClass="btnHoverPressed" />
+      <Button layoutX="48.0" layoutY="62.0" mnemonicParsing="false" onAction="#exitApp" opacity="0.0" prefHeight="12.0" prefWidth="42.0" styleClass="btnHoverPressed" />
    </children>
 </AnchorPane>
