@@ -1,0 +1,10 @@
+*-*-*- Factura -*-*-*-
+Decaf
+Moka, 
+Cost Coffe: 2450.0
+------------------------------
+Subtotal: 2450.0
+Total: 2768.5
+Estado: Pendiente
+--- Fin ---
+

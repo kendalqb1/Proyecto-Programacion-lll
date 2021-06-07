@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class FileRW {
 
-    public final File routeFile = new File("Facture/Facturas.txt");
+    public final File routeFile = new File("src/Facture/Facturas.txt");
 
     public boolean writeData(String data) {
         BufferedWriter bw = null;

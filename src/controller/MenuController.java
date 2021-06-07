@@ -15,9 +15,7 @@ public class MenuController {
 
     @FXML
     void loginPage() {
-
         try{
-            //TODO :Login
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/Login.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -39,7 +37,6 @@ public class MenuController {
     @FXML
     void viewOrders() {
         try {
-            //TODO :Login
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ViewOrders.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
