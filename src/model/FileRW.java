@@ -39,15 +39,18 @@ public class FileRW {
         }
     }
 
-    public void readData() {
+    public String readData() {
         try {
             Scanner sc = new Scanner(routeFile);
+            String data = "";
             while(sc.hasNextLine()) {
-                System.out.println(sc.next());
+                data += sc.nextLine() + "\n";
             }
+            return data;
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
+            return "";
         }
     }
 

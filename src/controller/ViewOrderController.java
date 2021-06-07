@@ -26,7 +26,7 @@ public class ViewOrderController {
         assert anchorPane != null : "fx:id=\"anchorPane\" was not injected: check your FXML file 'ViewOrders.fxml'.";
         assert textArea != null : "fx:id=\"textArea\" was not injected: check your FXML file 'ViewOrders.fxml'.";
 
-        rw.readData();
+        textArea.setText(rw.readData());
     }
 
 
