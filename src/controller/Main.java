@@ -22,7 +22,7 @@ public class Main extends Application {
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
             stage.setTitle("Home Page StarBuzz");
             stage.show();
-
+            System.out.println("New Branch");
         }
         catch (Exception e) {
             System.out.println(e.getMessage());

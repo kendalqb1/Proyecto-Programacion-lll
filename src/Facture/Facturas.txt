@@ -23,7 +23,7 @@ Cost Coffe: 2200.0
 ------------------------------
 Subtotal: 7150.0
 Total: 8079.5
-Estado: Pendiente
+Estado: Entregado
 --- Fin ---
 
 *-*-*- Factura -*-*-*-
@@ -33,6 +33,16 @@ Cost Coffe: 2450.0
 ------------------------------
 Subtotal: 2450.0
 Total: 2768.5
+Estado: Entregado
+--- Fin ---
+
+*-*-*- Factura -*-*-*-
+HouseBlend
+Moka, 
+Cost Coffe: 2650.0
+------------------------------
+Subtotal: 2650.0
+Total: 2994.5
 Estado: Entregado
 --- Fin ---
 
