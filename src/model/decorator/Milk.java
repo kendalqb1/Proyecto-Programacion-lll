@@ -8,7 +8,7 @@ public class Milk extends CondimentDecorator {
     }
 
     public String getDescription() {
-        return beverage.getDescription() + ", Milk";
+        return beverage.getDescription() + "Milk, ";
     }
 
     public double cost() {
