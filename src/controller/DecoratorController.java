@@ -93,5 +93,6 @@ public class DecoratorController {
         }
 
         boxNone.setDisable(boxMilk.isSelected() || boxWhip.isSelected() || boxMoka.isSelected() || boxSoy.isSelected());
+
     }
 }

@@ -20,6 +20,15 @@
     -fx-font-family: 'Raleway', sans-serif;
 }
 
+#textArea {
+    /*-fx-text-fill: white;*/
+    -fx-font-family: 'Raleway', sans-serif;
+}
+
+#textArea:pressed {
+    -fx-font-size: 20px;
+}
+
 .btnOpacity {
    -fx-cursor: hand;
 }
