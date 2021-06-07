@@ -35,6 +35,8 @@ public class CheckoutController {
 
     FileRW rw = new FileRW();
 
+    Dialog dialog = new Dialog();
+
     @FXML
     void initialize() {
         double price = 0;
@@ -59,33 +61,36 @@ public class CheckoutController {
 
     @FXML
     void payOrder() {
-
-        //TODO: Save order
-        String data = "*-*-*- Factura -*-*-*-\n";
-        double price = 0;
-        for (int i = 0; i < order.sizeBeverages(); i++) {
-            price += order.getBeverages(i).cost();
-            textArea.appendText(order.getBeverages(i).getDescription() + "\nCost Coffe: " +
-                            order.getBeverages(i).cost() + "\n------------------------------\n");
-            data += order.getBeverages(i).getDescription() + "\nCost Coffe: " +
-                    order.getBeverages(i).cost() + "\n------------------------------\n";
-        }
-        data += "Subtotal: " + price + "\n";
-        data += "Total: " + (price + (price * 0.13))  + "\n";
-        data += "Estado: Pendiente\n";
-        data += "--- Fin ---\n\n";
-        if(rw.writeData(data)) {
-            textArea.setText("");
-            Dialog dialog = new Dialog();
-            Alert d = dialog.createInformationDialog("Process Order Successful");
+        if (checkout.getOrder().isClear()) {
+            Alert d = dialog.createErrorDialog("Add some coffee to pay");
             d.showAndWait();
-            checkout.getOrder().clearList();
-            ((Stage) anchorPane.getScene().getWindow()).close();
         }
         else {
-            Dialog dialog = new Dialog();
-            Alert d = dialog.createInformationDialog("Process Order unsuccessful try again");
-            d.showAndWait();
+            //TODO: Save order
+            String data = "*-*-*- Factura -*-*-*-\n";
+            double price = 0;
+            for (int i = 0; i < order.sizeBeverages(); i++) {
+                price += order.getBeverages(i).cost();
+                textArea.appendText(order.getBeverages(i).getDescription() + "\nCost Coffe: " +
+                        order.getBeverages(i).cost() + "\n------------------------------\n");
+                data += order.getBeverages(i).getDescription() + "\nCost Coffe: " +
+                        order.getBeverages(i).cost() + "\n------------------------------\n";
+            }
+            data += "Subtotal: " + price + "\n";
+            data += "Total: " + (price + (price * 0.13))  + "\n";
+            data += "Estado: Pendiente\n";
+            data += "--- Fin ---\n\n";
+            if(rw.writeData(data)) {
+                textArea.setText("");
+                Alert d = dialog.createInformationDialog("Process Order Successful");
+                d.showAndWait();
+                checkout.getOrder().clearList();
+                ((Stage) anchorPane.getScene().getWindow()).close();
+            }
+            else {
+                Alert d = dialog.createInformationDialog("Process Order unsuccessful try again");
+                d.showAndWait();
+            }
         }
 
 

@@ -20,7 +20,7 @@
             <Image url="@../assets/img/View_Orders.png" />
          </image>
       </ImageView>
-      <Button layoutX="878.0" layoutY="414.0" mnemonicParsing="false" onAction="#goToMenu" opacity="0.0" prefHeight="31.0" prefWidth="99.0" style="-fx-background-radius: 40px;" styleClass="btnHoverPressed" />
+      <Button layoutX="818.0" layoutY="414.0" mnemonicParsing="false" onAction="#goToMenu" opacity="0.0" prefHeight="31.0" prefWidth="99.0" style="-fx-background-radius: 40px;" styleClass="btnHoverPressed" />
       <TextArea fx:id="textArea" layoutX="83.0" layoutY="131.0" prefHeight="438.0" prefWidth="678.0">
          <font>
             <Font size="20.0" />
@@ -31,5 +31,6 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
+      <Button layoutX="940.0" layoutY="414.0" mnemonicParsing="false" onAction="#saveOrders" opacity="0.0" prefHeight="31.0" prefWidth="99.0" style="-fx-background-radius: 40px;" styleClass="btnHoverPressed" />
    </children>
 </AnchorPane>

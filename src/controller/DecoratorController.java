@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -27,6 +28,9 @@ public class DecoratorController {
     @FXML
     private CheckBox boxNone;
 
+    @FXML
+    private Button btnNext;
+
     private Beverage beverage;
 
     public Beverage getBeverage() {
@@ -39,7 +43,6 @@ public class DecoratorController {
 
     @FXML
     void initialize() {
-
     }
 
     @FXML
@@ -92,5 +95,13 @@ public class DecoratorController {
 
         boxNone.setDisable(boxMilk.isSelected() || boxWhip.isSelected() || boxMoka.isSelected() || boxSoy.isSelected());
 
+
+        if (boxMilk.isSelected() || boxWhip.isSelected() || boxMoka.isSelected() || boxSoy.isSelected() || boxNone.isSelected()) {
+            btnNext.setDisable(false);
+        }
+        else {
+            btnNext.setDisable(true);
+        }
     }
+
 }

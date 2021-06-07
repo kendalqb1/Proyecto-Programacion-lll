@@ -4,11 +4,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.FileRW;
+import view.Dialog;
 
 
 public class ViewOrderController {
@@ -26,9 +28,29 @@ public class ViewOrderController {
         assert anchorPane != null : "fx:id=\"anchorPane\" was not injected: check your FXML file 'ViewOrders.fxml'.";
         assert textArea != null : "fx:id=\"textArea\" was not injected: check your FXML file 'ViewOrders.fxml'.";
 
-        textArea.setText(rw.readData());
+        if (rw.readData() == "") {
+            textArea.setText("No hay ordenes");
+        } else {
+            textArea.setText(rw.readData());
+        }
     }
 
+    @FXML
+    void saveOrders() {
+        String data = textArea.getText();
+        if(rw.writeDataOrders(data)) {
+            Dialog dialog = new Dialog();
+            Alert d = dialog.createInformationDialog("Save Successful");
+            d.showAndWait();
+            textArea.setText(rw.readData());
+        }
+        else {
+            Dialog dialog = new Dialog();
+            Alert d = dialog.createInformationDialog("Save unsuccessful");
+            d.showAndWait();
+        }
+        textArea.setText(rw.readData());
+    }
 
     @FXML
     void goToMenu() {

@@ -32,6 +32,10 @@ public class Order {
         beverages.remove(1);
     }
 
+    public boolean isClear() {
+        return beverages.isEmpty();
+    }
+
     public void clearList() {
         beverages.clear();
     }

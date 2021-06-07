@@ -19,7 +19,7 @@
          </image>
       </ImageView>
       <Button layoutX="815.0" layoutY="567.0" mnemonicParsing="false" onAction="#closeWindow" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
-      <Button layoutX="939.0" layoutY="566.0" mnemonicParsing="false" onAction="#completeOrder" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
+      <Button fx:id="btnNext" disable="true" layoutX="939.0" layoutY="566.0" mnemonicParsing="false" onAction="#completeOrder" opacity="0.0" prefHeight="35.0" prefWidth="117.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <CheckBox fx:id="boxMilk" layoutX="685.0" layoutY="253.0" mnemonicParsing="false" onAction="#pressedBox" />
       <CheckBox fx:id="boxSoy" layoutX="685.0" layoutY="378.0" mnemonicParsing="false" onAction="#pressedBox" />
       <CheckBox fx:id="boxWhip" layoutX="685.0" layoutY="312.0" mnemonicParsing="false" onAction="#pressedBox" />
