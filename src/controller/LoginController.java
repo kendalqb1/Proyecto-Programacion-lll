@@ -13,13 +13,10 @@ import javafx.stage.Stage;
 import view.Dialog;
 
 import java.io.IOException;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 
 public class LoginController {
 
-    Database db = new Database();
     Dialog dialog = new Dialog();
 
     @FXML
@@ -34,7 +31,7 @@ public class LoginController {
     private int counter = 1;
 
     @FXML
-    void loginManagement() throws SQLException, IOException {
+    void loginManagement() throws IOException {
         if (!searchUser()) {
              if(counter == 3) {
                 Alert d = dialog.createErrorDialog("Incorrect user or password, Three failed attempts");
@@ -53,7 +50,7 @@ public class LoginController {
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             scene.getStylesheets().add("assets/css/style.css");
-            stage.setTitle("HomePage");
+            stage.setTitle("Choose Order");
             stage.setResizable(false);
             stage.setScene(scene);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
@@ -65,21 +62,9 @@ public class LoginController {
         }
     }
 
-    Boolean searchUser() throws SQLException {
+    Boolean searchUser() {
         String username = fieldUsername.getText();
         String password = fieldPassword.getText();
-        ResultSet result = db.readData();
-        if (result != null) {
-            while (result.next()) {
-                if (result.getString("username").equals(username) && result.getString("password").equals(password)) {
-                    return true;
-                }
-            }
-        }
-        else {
-            System.out.println("Error in databae");
-            return false;
-        }
-        return false;
+        return username.equals("Admin") && password.equals("admin");
     }
 }

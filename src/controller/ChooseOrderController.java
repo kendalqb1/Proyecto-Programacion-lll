@@ -126,7 +126,7 @@ public class ChooseOrderController {
             Parent root = loader.load();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
-            stage.setTitle("Espresso");
+            stage.setTitle("Checkout");
             scene.getStylesheets().add("assets/css/style.css");
             stage.setResizable(false);
             stage.setScene(scene);
@@ -148,7 +148,7 @@ public class ChooseOrderController {
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
-                stage.setTitle("Espresso");
+                stage.setTitle("Main Menu");
                 scene.getStylesheets().add("assets/css/style.css");
                 stage.setResizable(false);
                 stage.setScene(scene);

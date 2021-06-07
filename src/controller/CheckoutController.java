@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Checkout;
+import model.FileRW;
 import model.Order;
 import view.Dialog;
 
@@ -30,9 +31,12 @@ public class CheckoutController {
 
     private Checkout checkout = Checkout.getInstance();
 
+    Order order = checkout.getOrder();
+
+    FileRW rw = new FileRW();
+
     @FXML
     void initialize() {
-        Order order = checkout.getOrder();
         double price = 0;
         for (int i = 0; i < order.sizeBeverages(); i++) {
             price += order.getBeverages(i).cost();
@@ -50,26 +54,41 @@ public class CheckoutController {
 
     @FXML
     void closeWindow() {
-        ((Stage)anchorPane.getScene().getWindow()).close();
+        ((Stage) anchorPane.getScene().getWindow()).close();
     }
 
     @FXML
     void payOrder() {
-        Dialog dialog = new Dialog();
-        Alert d = dialog.createInformationDialog("Process Order Successful");
-        d.showAndWait();
 
         //TODO: Save order
+        String data = "*-*-*- Factura -*-*-*-\n";
+        double price = 0;
+        for (int i = 0; i < order.sizeBeverages(); i++) {
+            price += order.getBeverages(i).cost();
+            textArea.appendText(order.getBeverages(i).getDescription() + "\nCost Coffe: " +
+                            order.getBeverages(i).cost() + "\n------------------------------\n");
+            data += order.getBeverages(i).getDescription() + "\nCost Coffe: " +
+                    order.getBeverages(i).cost() + "\n------------------------------\n";
+        }
+        data += "Subtotal: " + price + "\n";
+        data += "Total: " + (price + (price * 0.13))  + "\n";
+        data += "Estado: Pendiente\n";
+        data += "--- Fin ---\n\n";
+        if(rw.writeData(data)) {
+            textArea.setText("");
+            Dialog dialog = new Dialog();
+            Alert d = dialog.createInformationDialog("Process Order Successful");
+            d.showAndWait();
+            checkout.getOrder().clearList();
+            ((Stage) anchorPane.getScene().getWindow()).close();
+        }
+        else {
+            Dialog dialog = new Dialog();
+            Alert d = dialog.createInformationDialog("Process Order unsuccessful try again");
+            d.showAndWait();
+        }
 
 
-
-
-
-
-
-
-        checkout.getOrder().clearList();
-        ((Stage)anchorPane.getScene().getWindow()).close();
     }
 
 
