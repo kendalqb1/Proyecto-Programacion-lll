@@ -19,7 +19,6 @@ public class Main extends Application {
             stage.setResizable(false);
             stage.setScene(scene);
             scene.getStylesheets().add("assets/css/style.css");
-            Font.loadFont(getClass().getResourceAsStream("Raleway-Regular.ttf"), 10);
             stage.getIcons().add(new Image("assets/img/coffe-cup.png"));
             stage.setTitle("Home Page StarBuzz");
             stage.show();
