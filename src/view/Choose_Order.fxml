@@ -21,6 +21,6 @@
       <Button layoutX="358.0" layoutY="487.0" mnemonicParsing="false" onAction="#darkRoastDecorator" opacity="0.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100%;" styleClass="btnHoverPressed" />
       <Button layoutX="590.0" layoutY="485.0" mnemonicParsing="false" onAction="#decafDecorator" opacity="0.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100%;" styleClass="btnHoverPressed" />
       <Button layoutX="830.0" layoutY="485.0" mnemonicParsing="false" onAction="#espressoDecorator" opacity="0.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 100%;" styleClass="btnHoverPressed" />
-      <Button layoutX="948.0" layoutY="573.0" mnemonicParsing="false" opacity="0.0" prefHeight="34.0" prefWidth="116.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
+      <Button layoutX="948.0" layoutY="573.0" mnemonicParsing="false" onAction="#openCheckOut" opacity="0.0" prefHeight="34.0" prefWidth="116.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
    </children>
 </AnchorPane>

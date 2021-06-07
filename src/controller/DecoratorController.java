@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.Checkout;
 import model.decorator.*;
 
 public class DecoratorController {
@@ -26,6 +27,16 @@ public class DecoratorController {
     @FXML
     private CheckBox boxNone;
 
+    private Beverage beverage;
+
+    public Beverage getBeverage() {
+        return beverage;
+    }
+
+    public void setBeverage(Beverage bv) {
+        beverage = bv;
+    }
+
     @FXML
     void initialize() {
 
@@ -38,7 +49,7 @@ public class DecoratorController {
 
     @FXML
     void completeOrder() {
-        Beverage beverage = new HouseBlend();
+        Beverage beverage = getBeverage();
         boolean milk = boxMilk.isSelected();
         boolean whip = boxWhip.isSelected();
         boolean moka = boxMoka.isSelected();
@@ -58,6 +69,11 @@ public class DecoratorController {
                 beverage = new Soy(beverage);
             }
         }
+
+        Checkout checkout = Checkout.getInstance();
+        checkout.getOrder().addBeverage(beverage);
+
+
         System.out.println(beverage.getDescription() + " ₡" + beverage.cost());
         closeWindow();
     }
