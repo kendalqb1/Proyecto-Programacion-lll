@@ -4,14 +4,26 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import model.Checkout;
+import model.Order;
 import model.decorator.DarkRoast;
 import model.decorator.Decaf;
 import model.decorator.Espresso;
 import model.decorator.HouseBlend;
 
 public class ChooseOrderController {
+
+    @FXML
+    private TextField totalPrice;
+
+    @FXML
+    void initialize() {
+
+    }
+
 
     @FXML
     void houseBlendDecorator() {
