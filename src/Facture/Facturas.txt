@@ -1,66 +1,24 @@
 *-*-*- Factura -*-*-*-
-Espresso
-Moka, Soy, 
+HouseBlend
+Moka, 
 Cost Coffe: 2650.0
 ------------------------------
-Subtotal: 2650.0
-Total: 2994.5
-Estado: Entregado
---- Fin ---
-
-*-*-*- Factura -*-*-*-
-Decaf
-Moka, Soy, 
-Cost Coffe: 2850.0
-------------------------------
-Decaf
-
-Cost Coffe: 2100.0
-------------------------------
 Espresso
-Whip, 
-Cost Coffe: 2200.0
+Soy, 
+Cost Coffe: 2300.0
 ------------------------------
-Subtotal: 7150.0
-Total: 8079.5
-Estado: Pendiente
---- Fin ---
-
-*-*-*- Factura -*-*-*-
-Decaf
-Moka, 
-Cost Coffe: 2450.0
-------------------------------
-Subtotal: 2450.0
-Total: 2768.5
+Subtotal: 4950.0
+Total: 5593.5
 Estado: Entregado
 --- Fin ---
 
 *-*-*- Factura -*-*-*-
-HouseBlend
-Soy, 
-Cost Coffe: 2700.0
+Decaf
+Whip, Soy, 
+Cost Coffe: 2800.0
 ------------------------------
-Dark Roast
-
-Cost Coffe: 2500.0
-------------------------------
-Subtotal: 5200.0
-Total: 5876.0
-Estado: Pendiente
---- Fin ---
-
-*-*-*- Factura -*-*-*-
-HouseBlend
-Milk, Moka, 
-Cost Coffe: 3100.0
-------------------------------
-Dark Roast
-Whip, Moka, Soy, 
-Cost Coffe: 3550.0
-------------------------------
-Subtotal: 6650.0
-Total: 7514.5
+Subtotal: 2800.0
+Total: 3164.0
 Estado: Pendiente
 --- Fin ---
 
