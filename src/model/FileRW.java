@@ -1,13 +1,11 @@
 package model;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Scanner;
 
 public class FileRW {
 
-    public final File routeFile = new File("Facturas.txt");
+    public final File routeFile = new File("Facture/Facturas.txt");
 
     public boolean writeData(String data) {
         BufferedWriter bw = null;
@@ -38,6 +36,18 @@ public class FileRW {
             catch (IOException e){
                 System.out.println(e.getMessage());
             }
+        }
+    }
+
+    public void readData() {
+        try {
+            Scanner sc = new Scanner(routeFile);
+            while(sc.hasNextLine()) {
+                System.out.println(sc.next());
+            }
+        }
+        catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
