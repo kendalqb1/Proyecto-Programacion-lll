@@ -40,3 +40,25 @@ Total: 5311.0
 Estado: Pendiente
 --- Fin ---
 
+*-*-*- Factura -*-*-*-
+Espresso
+Moka, 
+Cost Coffe: 2250.0
+------------------------------
+Espresso
+Soy, 
+Cost Coffe: 2300.0
+------------------------------
+Espresso
+Whip, 
+Cost Coffe: 2200.0
+------------------------------
+Espresso
+Milk, 
+Cost Coffe: 2350.0
+------------------------------
+Subtotal: 9100.0
+Total: 10283.0
+Estado: Pendiente
+--- Fin ---
+
