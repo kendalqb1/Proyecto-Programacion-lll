@@ -11,24 +11,17 @@ import model.FileRW;
 import model.Order;
 import view.Dialog;
 
-import java.text.DecimalFormat;
-
 public class CheckoutController {
     @FXML
     private TextArea textArea;
-
     @FXML
     private TextField totalPrice;
-
     @FXML
     private AnchorPane anchorPane;
-
     @FXML
     private TextField totalIVA;
-
     @FXML
     private TextField subTotal;
-
     private Checkout checkout = Checkout.getInstance();
 
     Order order = checkout.getOrder();
@@ -51,7 +44,6 @@ public class CheckoutController {
         subTotal.appendText(String.valueOf(price));
         totalIVA.appendText(String.valueOf(price * 0.13));
         totalPrice.appendText(String.valueOf(price + (price * 0.13)));
-
     }
 
     @FXML
@@ -92,9 +84,6 @@ public class CheckoutController {
                 d.showAndWait();
             }
         }
-
-
     }
-
 
 }

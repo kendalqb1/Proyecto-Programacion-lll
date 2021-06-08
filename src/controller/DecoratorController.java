@@ -9,29 +9,22 @@ import model.Checkout;
 import model.decorator.*;
 
 public class DecoratorController {
-
     @FXML
     private AnchorPane anchorPane;
-
     @FXML
     private CheckBox boxMilk;
-
     @FXML
     private CheckBox boxSoy;
-
     @FXML
     private CheckBox boxWhip;
-
     @FXML
     private CheckBox boxMoka;
-
     @FXML
     private CheckBox boxNone;
-
     @FXML
     private Button btnNext;
-
     private Beverage beverage;
+
 
     public Beverage getBeverage() {
         return beverage;
@@ -39,10 +32,6 @@ public class DecoratorController {
 
     public void setBeverage(Beverage bv) {
         beverage = bv;
-    }
-
-    @FXML
-    void initialize() {
     }
 
     @FXML
@@ -72,10 +61,8 @@ public class DecoratorController {
                 beverage = new Soy(beverage);
             }
         }
-
         Checkout checkout = Checkout.getInstance();
         checkout.getOrder().addBeverage(beverage);
-
         closeWindow();
     }
 
@@ -92,16 +79,8 @@ public class DecoratorController {
             boxMoka.setDisable(false);
             boxSoy.setDisable(false);
         }
-
         boxNone.setDisable(boxMilk.isSelected() || boxWhip.isSelected() || boxMoka.isSelected() || boxSoy.isSelected());
-
-
-        if (boxMilk.isSelected() || boxWhip.isSelected() || boxMoka.isSelected() || boxSoy.isSelected() || boxNone.isSelected()) {
-            btnNext.setDisable(false);
-        }
-        else {
-            btnNext.setDisable(true);
-        }
+        btnNext.setDisable(!boxMilk.isSelected() && !boxWhip.isSelected() && !boxMoka.isSelected() && !boxSoy.isSelected() && !boxNone.isSelected());
     }
 
 }

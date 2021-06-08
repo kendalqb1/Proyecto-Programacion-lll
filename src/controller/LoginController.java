@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import view.Dialog;
+import view.Ventanas;
 
 import java.io.IOException;
 
@@ -18,6 +19,8 @@ import java.io.IOException;
 public class LoginController {
 
     Dialog dialog = new Dialog();
+
+    Ventanas v = new Ventanas();
 
     @FXML
     private AnchorPane anchorPane;
