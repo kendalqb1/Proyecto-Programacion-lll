@@ -1,7 +1,6 @@
 package model;
 
 public class Checkout {
-
     private Order order = new Order(-1);
     private static Checkout instance;
 
