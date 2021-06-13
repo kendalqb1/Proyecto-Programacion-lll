@@ -22,3 +22,13 @@ Total: 3164.0
 Estado: Pendiente
 --- Fin ---
 
+*-*-*- Factura -*-*-*-
+Decaf
+
+Cost Coffe: 2100.0
+------------------------------
+Subtotal: 2100.0
+Total: 2373.0
+Estado: Pendiente
+--- Fin ---
+
