@@ -1,12 +1,8 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Checkout;
@@ -31,6 +27,8 @@ public class ChooseOrderController {
     @FXML
     void houseBlendDecorator() {
         try {
+            v.crearVentanaDecorador("ExtraHouseBlend.fxml","House Blend",new HouseBlend());
+            /*
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraHouseBlend.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -43,7 +41,7 @@ public class ChooseOrderController {
             stage.show();
             DecoratorController controller = loader.getController();
             controller.setBeverage(new HouseBlend());
-
+            */
         }catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -52,6 +50,8 @@ public class ChooseOrderController {
     @FXML
     void darkRoastDecorator() {
         try {
+            v.crearVentanaDecorador("ExtraDarkRoast.fxml","Dark Roast",new DarkRoast());
+            /*
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraDarkRoast.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -64,7 +64,7 @@ public class ChooseOrderController {
             stage.show();
             DecoratorController controller = loader.getController();
             controller.setBeverage(new DarkRoast());
-
+            */
         }catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -73,6 +73,8 @@ public class ChooseOrderController {
     @FXML
     void decafDecorator() {
         try {
+            v.crearVentanaDecorador("ExtraDecaf.fxml","Decaf",new Decaf());
+            /*
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraDecaf.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -85,7 +87,7 @@ public class ChooseOrderController {
             stage.show();
             DecoratorController controller = loader.getController();
             controller.setBeverage(new Decaf());
-
+            */
         }catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -94,6 +96,8 @@ public class ChooseOrderController {
     @FXML
     void espressoDecorator() {
         try {
+            v.crearVentanaDecorador("ExtraEspresso.fxml","Espresso",new Espresso());
+            /*
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../view/ExtraEspresso.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -106,7 +110,7 @@ public class ChooseOrderController {
             stage.show();
             DecoratorController controller = loader.getController();
             controller.setBeverage(new Espresso());
-
+            */
         }catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -114,7 +118,8 @@ public class ChooseOrderController {
 
     @FXML
     void openCheckOut() {
-        v.crearVentana("Checkout.fxml", "Chekout");
+        checkout.notifyExit();//prevents multiple open checkout windows
+        v.crearVentanaObservable("Checkout.fxml", "Chekout",checkout);//creates observable window
     }
 
     @FXML
@@ -124,6 +129,7 @@ public class ChooseOrderController {
         if (result.get() == ButtonType.OK) {
             v.crearVentana("Menu.fxml", "Main Menu");
             checkout.getOrder().clearList();
+            checkout.notifyExit(); //to close the checkout
             ((Stage)anchorPane.getScene().getWindow()).close();
         }
     }

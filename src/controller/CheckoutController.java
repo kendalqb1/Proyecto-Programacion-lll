@@ -11,7 +11,10 @@ import model.FileRW;
 import model.Order;
 import view.Dialog;
 
-public class CheckoutController {
+import java.util.Observable;
+import java.util.Observer;
+
+public class CheckoutController implements Observer {
     @FXML
     private TextArea textArea;
     @FXML
@@ -33,6 +36,7 @@ public class CheckoutController {
     @FXML
     void initialize() {
         double price = 0;
+        textArea.clear();subTotal.clear();totalIVA.clear();totalPrice.clear();
         for (int i = 0; i < order.sizeBeverages(); i++) {
             price += order.getBeverages(i).cost();
             textArea.appendText(
@@ -86,4 +90,10 @@ public class CheckoutController {
         }
     }
 
+    //prevents free coffe
+    @Override
+    public void update(Observable o, Object arg) {
+        if (arg != null){closeWindow();}
+        else{initialize();}
+    }
 }

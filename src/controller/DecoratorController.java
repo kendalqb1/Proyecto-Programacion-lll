@@ -63,6 +63,7 @@ public class DecoratorController {
         }
         Checkout checkout = Checkout.getInstance();
         checkout.getOrder().addBeverage(beverage);
+        checkout.observeChanged(); //to update the checkout
         closeWindow();
     }
 
