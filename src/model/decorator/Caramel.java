@@ -10,8 +10,9 @@ public class Caramel extends CondimentDecorator {
     public String getDescription() {
         return beverage.getDescription() + ", Caramel";
     }
+    public Double getCost() { return beverage.cost() + 0; }
 
-    public double cost() {
+    public Double cost() {
         return 0 + beverage.cost();
     }
 

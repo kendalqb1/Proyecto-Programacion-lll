@@ -2,10 +2,11 @@ package model.decorator;
 
 public class Decaf  extends Beverage{
     public Decaf() {
-        description = "Decaf\n";
+        description = "Decaf  -> ";
+        cost = 2100.0;
     }
 
-    public double cost() {
-        return 2100;
+    public Double cost() {
+        return 2100.0;
     }
 }

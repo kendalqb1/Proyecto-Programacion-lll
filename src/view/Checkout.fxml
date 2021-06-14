@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,18 +22,20 @@
          </image>
       </ImageView>
       <Button layoutX="398.0" layoutY="576.0" mnemonicParsing="false" onAction="#closeWindow" opacity="0.0" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
-      <TextArea fx:id="textArea" layoutX="73.0" layoutY="201.0" prefHeight="346.0" prefWidth="588.0" style="-fx-background-color: #dfb784;">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </TextArea>
       <TextField fx:id="totalPrice" editable="true" layoutX="923.0" layoutY="530.0" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: none; -fx-text-fill: #FFFFFF;" text="₡">
          <font>
             <Font size="24.0" />
          </font>
       </TextField>
       <Button layoutX="700.0" layoutY="541.0" mnemonicParsing="false" onAction="#payOrder" opacity="0.0" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
+      <Button layoutX="252.0" layoutY="576.0" mnemonicParsing="false" onAction="#editOrder" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" text="Edit" />
       <TextField fx:id="totalIVA" editable="false" layoutX="768.0" layoutY="468.0" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: none; -fx-text-fill: #FFFFFF;" text="₡" />
       <TextField fx:id="subTotal" editable="false" layoutX="775.0" layoutY="440.0" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: none; -fx-text-fill: #FFFFFF;" text="₡" />
+      <TableView fx:id="tableOrders" layoutX="73.0" layoutY="201.0" prefHeight="346.0" prefWidth="588.0">
+        <columns>
+          <TableColumn fx:id="ColumnBeverage" prefWidth="405.0" text="Beverage" />
+          <TableColumn fx:id="ColumnCost" prefWidth="182.0" text="Cost Coffe" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

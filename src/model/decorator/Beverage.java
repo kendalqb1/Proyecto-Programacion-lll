@@ -3,10 +3,14 @@ package model.decorator;
 
 public abstract class Beverage {
     String description;
+    Double cost;
+
     public String getDescription() {
         return description;
     }
-    public  abstract  double cost();
+    public Double getCost() { return cost; }
+
+    public  abstract  Double cost();
 
 
 }

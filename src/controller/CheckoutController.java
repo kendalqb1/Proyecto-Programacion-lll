@@ -1,22 +1,22 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import model.Checkout;
 import model.FileRW;
 import model.Order;
+import model.decorator.Beverage;
 import view.Dialog;
+import view.Ventanas;
 
 import java.util.Observable;
 import java.util.Observer;
 
 public class CheckoutController implements Observer {
-    @FXML
-    private TextArea textArea;
+
     @FXML
     private TextField totalPrice;
     @FXML
@@ -25,7 +25,14 @@ public class CheckoutController implements Observer {
     private TextField totalIVA;
     @FXML
     private TextField subTotal;
-    private Checkout checkout = Checkout.getInstance();
+    @FXML
+    private TableView<Beverage> tableOrders;
+    @FXML
+    private TableColumn<Beverage, String> ColumnBeverage;
+    @FXML
+    private TableColumn<Beverage, Double> ColumnCost;
+    private final Checkout checkout = Checkout.getInstance();
+    private Ventanas v = new Ventanas();
 
     Order order = checkout.getOrder();
 
@@ -35,19 +42,17 @@ public class CheckoutController implements Observer {
 
     @FXML
     void initialize() {
-        double price = 0;
-        textArea.clear();subTotal.clear();totalIVA.clear();totalPrice.clear();
+        ColumnBeverage.setCellValueFactory(new PropertyValueFactory<>("description"));
+        ColumnCost.setCellValueFactory(new PropertyValueFactory<>("cost"));
+        Double priceBeverages = 0.0;
+        subTotal.clear();totalIVA.clear();totalPrice.clear();tableOrders.getItems().clear();
         for (int i = 0; i < order.sizeBeverages(); i++) {
-            price += order.getBeverages(i).cost();
-            textArea.appendText(
-                    order.getBeverages(i).getDescription() + "\nCost Coffe: " +
-                            order.getBeverages(i).cost() + "\n------------------------------\n"
-            );
+            priceBeverages += order.getBeverages(i).getCost();
+            tableOrders.getItems().add(order.getBeverages(i));
         }
-        textArea.appendText("Total Order: " + price);
-        subTotal.appendText(String.valueOf(price));
-        totalIVA.appendText(String.valueOf(price * 0.13));
-        totalPrice.appendText(String.valueOf(price + (price * 0.13)));
+        subTotal.setText("₡ " + priceBeverages);
+        totalIVA.appendText("₡ " + (priceBeverages * 0.13));
+        totalPrice.appendText("₡ " + (priceBeverages + (priceBeverages * 0.13)));
     }
 
     @FXML
@@ -56,44 +61,66 @@ public class CheckoutController implements Observer {
     }
 
     @FXML
-    void payOrder() {
-        if (checkout.getOrder().isClear()) {
-            Alert d = dialog.createErrorDialog("Add some coffee to pay");
-            d.showAndWait();
+    void editOrder() {
+        Beverage beverage = beverageSelect();
+        if (!(beverage == null)){
+            //TODO: editar orden
+            System.out.println(beverage.getDescription());
         }
         else {
-            //TODO: Save order
-            String data = "*-*-*- Factura -*-*-*-\n";
-            double price = 0;
-            for (int i = 0; i < order.sizeBeverages(); i++) {
-                price += order.getBeverages(i).cost();
-                textArea.appendText(order.getBeverages(i).getDescription() + "\nCost Coffe: " +
-                        order.getBeverages(i).cost() + "\n------------------------------\n");
-                data += order.getBeverages(i).getDescription() + "\nCost Coffe: " +
-                        order.getBeverages(i).cost() + "\n------------------------------\n";
-            }
-            data += "Subtotal: " + price + "\n";
-            data += "Total: " + (price + (price * 0.13))  + "\n";
-            data += "Estado: Pendiente\n";
-            data += "--- Fin ---\n\n";
-            if(rw.writeData(data)) {
-                textArea.setText("");
-                Alert d = dialog.createInformationDialog("Process Order Successful");
-                d.showAndWait();
-                checkout.getOrder().clearList();
-                ((Stage) anchorPane.getScene().getWindow()).close();
-            }
-            else {
-                Alert d = dialog.createInformationDialog("Process Order unsuccessful try again");
-                d.showAndWait();
+            Alert d = dialog.createErrorDialog("Select a drink");
+            d.showAndWait();
+        }
+    }
+
+    Beverage beverageSelect() {
+        for (int i = 0; i < tableOrders.getItems().size(); i++) {
+            if(tableOrders.getSelectionModel().isSelected(i)){
+                return tableOrders.getItems().get(i);
             }
         }
+        return null;
+    }
+
+    @FXML
+    void payOrder() {
+//        if (checkout.getOrder().isClear()) {
+//            Alert d = dialog.createErrorDialog("Add some coffee to pay");
+//            d.showAndWait();
+//        }
+//        else {
+//            //TODO: Save order
+//            String data = "*-*-*- Factura -*-*-*-\n";
+//            double price = 0;
+//            for (int i = 0; i < order.sizeBeverages(); i++) {
+//                price += order.getBeverages(i).cost();
+//                textArea.appendText(order.getBeverages(i).getDescription() + "\nCost Coffe: " +
+//                        order.getBeverages(i).cost() + "\n------------------------------\n");
+//                data += order.getBeverages(i).getDescription() + "\nCost Coffe: " +
+//                        order.getBeverages(i).cost() + "\n------------------------------\n";
+//            }
+//            data += "Subtotal: " + price + "\n";
+//            data += "Total: " + (price + (price * 0.13))  + "\n";
+//            data += "Estado: Pendiente\n";
+//            data += "--- Fin ---\n\n";
+//            if(rw.writeData(data)) {
+//                textArea.setText("");
+//                Alert d = dialog.createInformationDialog("Process Order Successful");
+//                d.showAndWait();
+//                checkout.getOrder().clearList();
+//                ((Stage) anchorPane.getScene().getWindow()).close();
+//            }
+//            else {
+//                Alert d = dialog.createInformationDialog("Process Order unsuccessful try again");
+//                d.showAndWait();
+//            }
+//        }
     }
 
     //prevents free coffe
     @Override
     public void update(Observable o, Object arg) {
         if (arg != null){closeWindow();}
-        else{initialize();}
+        else{ initialize(); }
     }
 }

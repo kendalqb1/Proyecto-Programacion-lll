@@ -8,11 +8,12 @@ public class Moka extends CondimentDecorator{
     }
 
     public String getDescription() {
-        return beverage.getDescription() + "Moka, ";
+        return beverage.getDescription() + "Moka. ";
     }
+    public Double getCost() { return beverage.cost() + 350; }
 
-    public double cost() {
-        return 350 + beverage.cost();
+    public Double cost() {
+        return 350 + beverage.getCost();
     }
 
 }

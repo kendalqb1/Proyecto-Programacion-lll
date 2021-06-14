@@ -10,8 +10,8 @@ public class Checkout extends Observable {
     }
 
     //setChanged() its protected so this lets you update from outside
-    public void observeChanged(){setChanged();notifyObservers(); }
-    public void notifyExit(){setChanged();notifyObservers( true); }
+    public void observeChanged(){ setChanged();notifyObservers(); }
+    public void notifyExit(){ setChanged();notifyObservers( true); }
 
     public Order getOrder() {
         return order;
