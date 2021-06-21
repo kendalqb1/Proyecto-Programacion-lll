@@ -29,6 +29,7 @@
       </TextField>
       <Button layoutX="700.0" layoutY="541.0" mnemonicParsing="false" onAction="#payOrder" opacity="0.0" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <Button layoutX="89.0" layoutY="575.0" mnemonicParsing="false" onAction="#editOrder" opacity="0.0" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
+      <Button layoutX="246.0" layoutY="576.0" mnemonicParsing="false" onAction="#deleteBeverage" opacity="0.0" prefHeight="34.0" prefWidth="115.0" style="-fx-background-radius: 100px;" styleClass="btnHoverPressed" />
       <TextField fx:id="totalIVA" editable="false" layoutX="768.0" layoutY="468.0" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: none; -fx-text-fill: #FFFFFF;" text="₡" />
       <TextField fx:id="subTotal" editable="false" layoutX="775.0" layoutY="440.0" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: none; -fx-text-fill: #FFFFFF;" text="₡" />
       <TableView fx:id="tableOrders" layoutX="73.0" layoutY="201.0" prefHeight="346.0" prefWidth="588.0">
