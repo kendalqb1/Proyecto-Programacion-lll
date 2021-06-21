@@ -103,11 +103,23 @@ public class CheckoutController implements Observer {
 
     @FXML
     void payOrder() {
-//        if (checkout.getOrder().isClear()) {
-//            Alert d = dialog.createErrorDialog("Add some coffee to pay");
-//            d.showAndWait();
-//        }
-//        else {
+        if (checkout.getOrder().isClear()) {
+            Alert d = dialog.createErrorDialog("Add some coffee to pay");
+            d.showAndWait();
+        }
+        else {
+           String data = "";
+            double price = 0;
+            for (int i = 0; i < order.sizeBeverages(); i++) {
+                price += order.getBeverages(i).cost();
+                data += order.getBeverages(i).getDescription()+"\n";
+            }
+            Database.writeData(data,price);
+            Alert d = dialog.createInformationDialog("Process Order Successful");
+            d.showAndWait();
+            checkout.getOrder().clearList();
+            ((Stage) anchorPane.getScene().getWindow()).close();
+        }
 //            //TODO: Save order
 //            String data = "*-*-*- Factura -*-*-*-\n";
 //            double price = 0;
