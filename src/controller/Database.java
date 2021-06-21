@@ -1,6 +1,8 @@
 package controller;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Database {
     /*
@@ -46,23 +48,24 @@ public class Database {
         }
     }
 
-    /*public String readDescription() {
+
+
+    public List<String> readDescription() {
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc-factura", "root", "admin");
             PreparedStatement pst = connection.prepareStatement("SELECT * FROM orders where status = ?");
             pst.setString(4,"Pending");
 
+            List<String> descList = new ArrayList<> ();
             ResultSet rs = pst.executeQuery();
 
-            if(rs.next()){
-                return rs.getString("description");
-            } else{return "none";}
+            while(rs.next()){
+                descList.add(rs.getString("description"));
 
+            }return descList;
         }
-        catch (Exception e) {
-            return null;
-        }
-    }*/
+        catch (Exception e) { return null;}
+    }
 
 
 
