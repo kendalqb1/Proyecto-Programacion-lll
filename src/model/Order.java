@@ -26,8 +26,8 @@ public class Order {
         return beverages.size();
     }
 
-    public void removeBeverage() {
-        beverages.remove(1);
+    public void removeBeverage(int i) {
+        beverages.remove(i);
     }
 
     public boolean isClear() {

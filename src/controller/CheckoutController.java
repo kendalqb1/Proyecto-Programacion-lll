@@ -14,6 +14,7 @@ import view.Ventanas;
 
 import java.util.Observable;
 import java.util.Observer;
+import java.util.Optional;
 
 public class CheckoutController implements Observer {
 
@@ -61,11 +62,29 @@ public class CheckoutController implements Observer {
     }
 
     @FXML
+    void deleteBeverage() {
+        for (int i = 0; i < tableOrders.getItems().size(); i++) {
+            if (tableOrders.getSelectionModel().isSelected(i)) {
+                Alert d = dialog.createConfirmationDialog("Remove selected drink?");
+                Optional<ButtonType> result = d.showAndWait();
+                if (result.get() == ButtonType.OK) {
+                    checkout.getOrder().removeBeverage(i);
+                    checkout.observeChanged();
+                }
+                return;
+            }
+        }
+        Alert d = dialog.createErrorDialog("Select a drink");
+        d.showAndWait();
+    }
+    @FXML
     void editOrder() {
         Beverage beverage = beverageSelect();
         if (!(beverage == null)){
             //TODO: editar orden
             System.out.println(beverage.getDescription());
+
+            checkout.observeChanged();
         }
         else {
             Alert d = dialog.createErrorDialog("Select a drink");
