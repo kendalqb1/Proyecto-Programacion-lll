@@ -13,4 +13,19 @@ public class UserDao implements UserDaoInterface {
         String query = "SELECT * FROM users";
         return st.executeQuery(query);
     }
+
+    @Override
+    public boolean create() {
+        return false;
+    }
+
+    @Override
+    public boolean delete() {
+        return false;
+    }
+
+    @Override
+    public boolean update() {
+        return false;
+    }
 }

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Order {
     int id;
-    List<Beverage> beverages;
+    ArrayList<Beverage> beverages;
 
     public Order(int num) {
         this.id = num;
@@ -42,6 +42,7 @@ public class Order {
         return beverages.get(ind);
     }
 
+    public ArrayList<Beverage> getBeverages() { return beverages; }
     @Override
     public String toString() {
         StringBuilder ss = new StringBuilder();

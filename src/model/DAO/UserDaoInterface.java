@@ -4,7 +4,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public interface UserDaoInterface {
-    public ResultSet read() throws SQLException;
 
+    boolean create();
+    ResultSet read() throws SQLException;
+    boolean delete();
+    boolean update();
 
 }
