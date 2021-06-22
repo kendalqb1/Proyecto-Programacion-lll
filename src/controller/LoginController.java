@@ -10,10 +10,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import model.DAO.UserDao;
 import view.Dialog;
 import view.Ventanas;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 
 public class LoginController {
@@ -34,7 +37,7 @@ public class LoginController {
     private int counter = 1;
 
     @FXML
-    void loginManagement() throws IOException {
+    void loginManagement() throws IOException, SQLException {
         if (!searchUser()) {
              if(counter == 3) {
                 Alert d = dialog.createErrorDialog("Incorrect user or password, Three failed attempts");
@@ -65,9 +68,22 @@ public class LoginController {
         }
     }
 
-    Boolean searchUser() {
+    Boolean searchUser() throws SQLException {
+        UserDao dao = new UserDao();
         String username = fieldUsername.getText();
         String password = fieldPassword.getText();
-        return username.equals("Admin") && password.equals("admin");
+        ResultSet result = dao.read();
+        if (result != null) {
+            while (result.next()) {
+                if (result.getString("username").equals(username) && result.getString("password").equals(password)) {
+                    return true;
+                }
+            }
+        }
+        else {
+            System.out.println("Error in databae");
+            return false;
+        }
+        return false;
     }
 }
