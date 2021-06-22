@@ -35,6 +35,8 @@ public class CheckoutController implements Observer {
     private TableColumn<Beverage, String> ColumnBeverage;
     @FXML
     private TableColumn<Beverage, Double> ColumnCost;
+    @FXML
+    private TextField fieldClient;
     private final Checkout checkout = Checkout.getInstance();
     private Ventanas v = new Ventanas();
     Order order = checkout.getOrder();
@@ -95,6 +97,7 @@ public class CheckoutController implements Observer {
     @FXML
     void payOrder() {
         FactureDao fdao = new FactureDao();
+        String client = "Sin nombre";
         if (checkout.getOrder().isClear()) {
             Alert d = dialog.createErrorDialog("Add some coffee to pay");
             d.showAndWait();
@@ -104,7 +107,10 @@ public class CheckoutController implements Observer {
             for (int i = 0; i < order.sizeBeverages(); i++) {
                 price += order.getBeverages(i).cost();
             }
-            fdao.create(new Facture("Jorge", order.getBeverages(), "Pendiente", price, price +(price*0.13)));
+            if (!(fieldClient.getText().isBlank())) {
+                client = fieldClient.getText();
+            }
+            fdao.create(new Facture(client, order.getBeverages(), "Pendiente", price, price +(price*0.13)));
             Alert d = dialog.createInformationDialog("Process Order Successful");
             d.showAndWait();
             checkout.getOrder().clearList();
