@@ -13,6 +13,8 @@ import model.decorator.Beverage;
 import view.Dialog;
 import view.Ventanas;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -53,9 +55,10 @@ public class CheckoutController implements Observer {
             priceBeverages += order.getBeverages(i).getCost();
             tableOrders.getItems().add(order.getBeverages(i));
         }
-        subTotal.setText("₡ " + priceBeverages);
-        totalIVA.appendText("₡ " + (priceBeverages * 0.13));
-        totalPrice.appendText("₡ " + (priceBeverages + (priceBeverages * 0.13)));
+
+        subTotal.setText("₡ " + new BigDecimal(priceBeverages).setScale(2, RoundingMode.HALF_UP));
+        totalIVA.appendText("₡ " + new BigDecimal((priceBeverages * 0.13)).setScale(2, RoundingMode.HALF_UP));
+        totalPrice.appendText("₡ " + new BigDecimal((priceBeverages + (priceBeverages * 0.13))).setScale(2, RoundingMode.HALF_UP));
     }
 
     @FXML
