@@ -5,19 +5,29 @@ import model.decorator.Beverage;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Facture {
+public class FactureRecovery {
+    private String ID;
     private String clientName;
-    private ArrayList<Beverage> arrayBeverages;
+    private String arrayBeverages;
     private String stateOrder;
     private String date;
     private double totalCost;
 
-    public Facture(String clientName, ArrayList<Beverage> arrayBeverages, String stateOrder, String date, double totalCost) {
+    public FactureRecovery(String ID, String clientName, String arrayBeverages, String stateOrder, String date, double totalCost) {
+        this.ID = ID;
         this.clientName = clientName;
         this.arrayBeverages = arrayBeverages;
         this.stateOrder = stateOrder;
         this.date = date;
         this.totalCost = totalCost;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getClientName() {
@@ -28,11 +38,11 @@ public class Facture {
         this.clientName = clientName;
     }
 
-    public ArrayList<Beverage> getArrayBeverages() {
+    public String  getArrayBeverages() {
         return arrayBeverages;
     }
 
-    public void setArrayBeverages(ArrayList<Beverage> arrayBeverages) {
+    public void setArrayBeverages(String arrayBeverages) {
         this.arrayBeverages = arrayBeverages;
     }
 

@@ -15,6 +15,7 @@ import view.Ventanas;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Optional;
@@ -110,7 +111,7 @@ public class CheckoutController implements Observer {
             if (!(fieldClient.getText().isBlank())) {
                 client = fieldClient.getText();
             }
-            fdao.create(new Facture(client, order.getBeverages(), "Pendiente", price, price +(price*0.13)));
+            fdao.create(new Facture(client, order.getBeverages(), "Pendiente", new Date().toString(), price +(price*0.13)));
             Alert d = dialog.createInformationDialog("Process Order Successful");
             d.showAndWait();
             checkout.getOrder().clearList();

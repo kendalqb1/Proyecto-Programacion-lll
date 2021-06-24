@@ -1,6 +1,7 @@
 package model.DAO;
 
 import model.Facture;
+import model.FactureRecovery;
 
 import java.sql.*;
 import java.util.Date;
@@ -43,6 +44,24 @@ public class FactureDao implements FactureDaoInterface{
         catch (Exception e) {
             return false;
         }
+
+    }
+
+    @Override
+    public boolean update(FactureRecovery f) throws SQLException {
+        try {
+            Connection c = db.getConnection();
+            String query = "UPDATE orders SET estado = ? WHERE orders.id = ?";
+            PreparedStatement ps = c.prepareStatement(query);
+            ps.setString(1, f.getStateOrder());
+            ps.setString(2, f.getID());
+            ps.executeUpdate();
+            return true;
+        }
+        catch (SQLException e) {
+            return false;
+        }
+
 
     }
 
