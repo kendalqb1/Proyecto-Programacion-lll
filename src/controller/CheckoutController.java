@@ -56,9 +56,9 @@ public class CheckoutController implements Observer {
             tableOrders.getItems().add(order.getBeverages(i));
         }
 
-        subTotal.setText("₡ " + new BigDecimal(priceBeverages).setScale(2, RoundingMode.HALF_UP));
-        totalIVA.appendText("₡ " + new BigDecimal((priceBeverages * 0.13)).setScale(2, RoundingMode.HALF_UP));
-        totalPrice.appendText("₡ " + new BigDecimal((priceBeverages + (priceBeverages * 0.13))).setScale(2, RoundingMode.HALF_UP));
+        subTotal.setText("₡ " + BigDecimal.valueOf(priceBeverages).setScale(2, RoundingMode.HALF_UP));
+        totalIVA.appendText("₡ " + BigDecimal.valueOf(priceBeverages * 0.13).setScale(2, RoundingMode.HALF_UP));
+        totalPrice.appendText("₡ " + BigDecimal.valueOf(priceBeverages + (priceBeverages * 0.13)).setScale(2, RoundingMode.HALF_UP));
     }
 
     @FXML
