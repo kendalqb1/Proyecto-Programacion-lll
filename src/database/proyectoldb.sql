@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2021 a las 01:30:44
+-- Tiempo de generación: 28-06-2021 a las 02:47:13
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `proyectoldb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` text COLLATE utf8_spanish_ci NOT NULL,
+  `cliente` text COLLATE utf8_spanish_ci NOT NULL,
+  `contenido` text COLLATE utf8_spanish_ci NOT NULL,
+  `estado` text COLLATE utf8_spanish_ci NOT NULL,
+  `fecha` text COLLATE utf8_spanish_ci NOT NULL,
+  `costo` text COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `orders`
+--
+
+INSERT INTO `orders` (`id`, `cliente`, `contenido`, `estado`, `fecha`, `costo`) VALUES
+('1', 'Jorge', 'Decaf  -> Moka. Soy. \n', 'Completada', 'Tue Jun 22 09:34:11 CST 2021', '3220.5');
 
 -- --------------------------------------------------------
 
@@ -50,6 +72,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `rol`, `state`) VALUES
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`(100));
 
 --
 -- Indices de la tabla `users`
